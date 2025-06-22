@@ -2,6 +2,20 @@
 
 import { cn } from "@/app/lib/utils";
 import { useState } from "react";
+import GridGlobe from "@/app/components/ui/Gridglobe";
+import { FaReact, FaNodeJs, FaRust, FaVuejs, FaCog } from "react-icons/fa";
+import {
+  SiTypescript,
+  SiGraphql,
+  SiMongodb,
+  SiNuxtdotjs,
+} from "react-icons/si";
+import { GlowingEffect } from "@/app/components/ui/glowing-effect";
+import dynamic from "next/dynamic";
+
+const World = dynamic(() => import("./Globe").then((m) => m.World), {
+  ssr: false,
+});
 
 export const BentoGrid = ({
   className,
@@ -43,8 +57,19 @@ export const BentoGridItem = ({
   timeZones?: string[];
 }) => {
   const [copiedText, setCopiedText] = useState("");
-  const rightLists = ["VueJS", "NuxtJS", "GraphQL", "MongoDB"];
-  const leftLists = ["ReactJS", "Typescript", "NodeJS", "Rust","Move"];
+  const rightLists = [
+    { name: "VueJS", icon: <FaVuejs /> },
+    { name: "NuxtJS", icon: <SiNuxtdotjs /> },
+    { name: "GraphQL", icon: <SiGraphql /> },
+    { name: "MongoDB", icon: <SiMongodb /> },
+  ];
+  const leftLists = [
+    { name: "ReactJS", icon: <FaReact /> },
+    { name: "Typescript", icon: <SiTypescript /> },
+    { name: "NodeJS", icon: <FaNodeJs /> },
+    { name: "Rust", icon: <FaRust /> },
+    { name: "Move", icon: <FaCog /> },
+  ];
 
   const handleCopy = () => {
     navigator.clipboard.writeText("your-email@example.com");
@@ -85,9 +110,9 @@ export const BentoGridItem = ({
                 {leftLists.map((item, i) => (
                   <span
                     key={i}
-                    className="p-7 text-lg lg:text-xl font-medium text-white bg-[#10132E] rounded-xl "
+                    className="p-8 text-lg lg:text-2xl font-medium text-white bg-[#10132E] rounded-xl flex items-center gap-2"
                   >
-                    {item}
+                    {item.icon} {item.name}
                   </span>
                 ))}
               </div>
@@ -96,9 +121,9 @@ export const BentoGridItem = ({
                 {rightLists.map((item, i) => (
                   <span
                     key={i}
-                    className="p-7 text-lg lg:text-xl font-medium text-white bg-[#10132E] rounded-xl "
+                    className="p-8 text-lg lg:text-2xl font-medium text-white bg-[#10132E] rounded-xl flex items-center gap-2"
                   >
-                    {item}
+                    {item.icon} {item.name}
                   </span>
                 ))}
               </div>
@@ -108,7 +133,7 @@ export const BentoGridItem = ({
       )}
       {/* Client Collaboration Item */}
       {id === 2 && (
-        <div className="flex flex-col h-full p-6">
+        <div className="flex flex-col h-full m-6">
           <div className="flex-1 flex items-center justify-center">
             <div className="relative">
               {/* Laptop illustration */}
@@ -137,62 +162,18 @@ export const BentoGridItem = ({
 
       {/* Time Zone Communications Item */}
       {id === 3 && (
-        <div className="flex flex-col h-full p-6">
-          <div className="mb-4">
-            <h3 className="text-lg font-bold text-white leading-tight">
-              {title}
-            </h3>
-          </div>
+        <div className="relative flex justify-center items-center h-[260px] md:h-[320px] lg:h-[360px] w-full bg-gradient-to-br from-[#1f3c2e] to-[#183e2a] rounded-2xl overflow-hidden">
+          {/* Text đè lên globe, đẩy xuống một chút */}
+          <h3 className="absolute z-20 text-center text-lg md:text-2xl lg:text-3xl font-bold text-white px-4 mt-4">
+            I'm very flexible with time zone <br className="hidden md:block" />
+            communications
+          </h3>
 
-          <div className="flex-1 flex flex-col justify-center">
-            {/* World map dots representation */}
-            <div className="relative mb-6">
-              <div className="grid grid-cols-4 gap-2 opacity-20">
-                {[...Array(16)].map((_, i) => (
-                  <div
-                    key={i}
-                    className="w-2 h-2 bg-gray-400 rounded-full"
-                  ></div>
-                ))}
-              </div>
-
-              {/* Active timezone indicators */}
-              <div className="absolute inset-0">
-                <div className="absolute top-2 left-4 w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
-                <div className="absolute bottom-4 right-6 w-3 h-3 bg-green-400 rounded-full animate-pulse delay-1000"></div>
-                <div className="absolute top-6 right-2 w-3 h-3 bg-green-400 rounded-full animate-pulse delay-500"></div>
-              </div>
-            </div>
-
-            {/* Time zone tags */}
-            <div className="flex flex-wrap gap-2">
-              {timeZones?.slice(0, 6).map((zone, index) => (
-                <span
-                  key={index}
-                  className="px-2 py-1 bg-green-500/20 text-green-300 rounded-md text-xs border border-green-500/30"
-                >
-                  {zone}
-                </span>
-              ))}
-            </div>
+          {/* Globe to hơn, nằm trung tâm */}
+          <div className="w-[240px] md:w-[300px] lg:w-[360px] mt-12">
+            <GridGlobe />
           </div>
         </div>
-      )}
-
-      {/* Default content for other items */}
-      {id > 3 && (
-        <>
-          {header}
-          <div className="transition duration-200 group-hover/bento:translate-x-2 p-6">
-            {icon}
-            <div className="mt-2 mb-2 font-sans font-bold text-neutral-200">
-              {title}
-            </div>
-            <div className="font-sans text-xs font-normal text-neutral-300">
-              {description}
-            </div>
-          </div>
-        </>
       )}
     </div>
   );

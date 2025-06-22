@@ -2,7 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
-import Bento from "./components/Bento";
+import { Bento } from "./components/Bento";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
@@ -18,7 +18,7 @@ export default function Home() {
       {/* <Header /> */}
 
       <main className="scroll-smooth relative bg-black-100 flex justify-center items-center flex-col overflow-hidden">
-        <div className="max-w-7xl w-full">
+        <div className="w-full">
           <section id="hero">
             <Hero />
           </section>
