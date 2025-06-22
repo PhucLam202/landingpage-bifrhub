@@ -16,7 +16,7 @@ export function Bento() {
       ></div>
       <section id="about" className="py-20 relative z-10">
         <BentoGrid className="w-full max-w-7xl mx-auto px-4 z-10">
-          {gridItems.map((item, i) => (
+          {gridItems.map((item, _) => (
             <BentoGridItem
               id={item.id}
               key={item.id}

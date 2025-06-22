@@ -1,11 +1,9 @@
 import Head from "next/head";
-import Image from "next/image";
-import Header from "./components/Header";
+
 import Hero from "./components/Hero";
+import Experience from "./components/Experience";
 import { Bento } from "./components/Bento";
-import Skills from "./components/Skills";
 import Projects from "./components/Projects";
-import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
 export default function Home() {
@@ -27,6 +25,12 @@ export default function Home() {
           </section>
           <section id="project">
             <Projects />
+          </section>
+          <section id="experience">
+            <Experience />
+          </section>
+          <section id="footer">
+            <Footer />
           </section>
         </div>
         {/* <section id="skills"><Skills /></section>

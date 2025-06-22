@@ -4,6 +4,7 @@ import React from "react";
 import { FaLocationArrow } from "react-icons/fa6";
 import { projects } from "@/app/types/data";
 import { PinContainer } from "./ui/pin";
+import Image from 'next/image';
 
 const Projects = () => {
   return (
@@ -142,7 +143,7 @@ const Projects = () => {
                           transform: `translateX(-${5 * index + 2}px)`,
                         }}
                       >
-                        <img src={icon} alt="icon" className="p-2" />
+                        <Image src={icon} alt="icon" className="p-2" width={64} height={64} />
                       </div>
                     ))}
                   </div>

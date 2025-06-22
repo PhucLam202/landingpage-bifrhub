@@ -23,7 +23,7 @@ export function GridBackground() {
           My portpolio <br />
         </p>
         <p className="relative z-20 bg-gradient-to-b from-neutral-200 to-neutral-500 bg-clip-text py-1 text-4xl font-bold text-transparent sm:text-7xl">
-          Hi i'm <ColourfulText text="PhucLam" /> <br />
+          Hi i&apos;m <ColourfulText text="PhucLam" /> <br />
         </p>
         <div className="relative z-10 max-w-3xl mx-auto text-lelf bg-gradient-to-b from-neutral-200 to-neutral-500 bg-clip-text py-5 text-xl font-bold text-transparent sm:text-xl">
           <TextGenerateEffect

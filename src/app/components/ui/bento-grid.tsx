@@ -1,7 +1,6 @@
 "use client";
 
 import { cn } from "@/app/lib/utils";
-import { useState } from "react";
 import GridGlobe from "@/app/components/ui/Gridglobe";
 import { FaReact, FaNodeJs, FaRust, FaVuejs, FaCog } from "react-icons/fa";
 import {
@@ -10,12 +9,6 @@ import {
   SiMongodb,
   SiNuxtdotjs,
 } from "react-icons/si";
-import { GlowingEffect } from "@/app/components/ui/glowing-effect";
-import dynamic from "next/dynamic";
-
-const World = dynamic(() => import("./Globe").then((m) => m.World), {
-  ssr: false,
-});
 
 export const BentoGrid = ({
   className,
@@ -35,17 +28,11 @@ export const BentoGrid = ({
     </div>
   );
 };
-const rightLists = ["VueJS", "NuxtJS", "GraphQL"];
 
 export const BentoGridItem = ({
   id,
   className,
   title,
-  description,
-  header,
-  icon,
-  stack,
-  timeZones,
 }: {
   id: number;
   className?: string;
@@ -56,7 +43,6 @@ export const BentoGridItem = ({
   stack?: string[];
   timeZones?: string[];
 }) => {
-  const [copiedText, setCopiedText] = useState("");
   const rightLists = [
     { name: "VueJS", icon: <FaVuejs /> },
     { name: "NuxtJS", icon: <SiNuxtdotjs /> },
@@ -70,12 +56,6 @@ export const BentoGridItem = ({
     { name: "Rust", icon: <FaRust /> },
     { name: "Move", icon: <FaCog /> },
   ];
-
-  const handleCopy = () => {
-    navigator.clipboard.writeText("your-email@example.com");
-    setCopiedText("Email copied!");
-    setTimeout(() => setCopiedText(""), 2000);
-  };
 
   return (
     <div
@@ -163,9 +143,8 @@ export const BentoGridItem = ({
       {/* Time Zone Communications Item */}
       {id === 3 && (
         <div className="relative flex justify-center items-center h-[260px] md:h-[320px] lg:h-[360px] w-full bg-gradient-to-br from-[#1f3c2e] to-[#183e2a] rounded-2xl overflow-hidden">
-          {/* Text đè lên globe, đẩy xuống một chút */}
           <h3 className="absolute z-20 text-center text-lg md:text-2xl lg:text-3xl font-bold text-white px-4 mt-4">
-            I'm very flexible with time zone <br className="hidden md:block" />
+            I&apos;m very flexible with time zone <br className="hidden md:block" />
             communications
           </h3>
 
