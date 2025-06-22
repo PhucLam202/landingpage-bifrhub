@@ -25,6 +25,9 @@ export default function Home() {
           <section id="bento">
             <Bento />
           </section>
+          <section id="project">
+            <Projects />
+          </section>
         </div>
         {/* <section id="skills"><Skills /></section>
       <section id="projects"><Projects /></section>
