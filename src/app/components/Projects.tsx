@@ -4,7 +4,7 @@ import React from "react";
 import { FaLocationArrow } from "react-icons/fa6";
 import { projects } from "@/app/types/data";
 import { PinContainer } from "./ui/pin";
-import Image from 'next/image';
+import Image from "next/image";
 
 const Projects = () => {
   return (
@@ -58,7 +58,7 @@ const Projects = () => {
               className="lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center sm:w-96 w-[80vw]"
               key={item.id}
             >
-              <PinContainer title="View Project" href={item.link}>
+              <PinContainer title="View Project" href={item.linkgit}>
                 <div className="relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[20vh] lg:h-[30vh] mb-10">
                   {/* Enhanced Background Container */}
                   <div className="relative w-full h-full overflow-hidden lg:rounded-3xl rounded-2xl">
@@ -102,13 +102,12 @@ const Projects = () => {
                     {/* Tech Stack Floating Elements */}
                     <div className="absolute inset-0 flex items-center justify-center">
                       <div className="grid grid-cols-3 gap-4 opacity-30">
-                      {item.iconLists.slice(0, 6).map((icon, index) => (
+                        {item.iconLists.slice(0, 6).map((icon, index) => (
                           <div
                             key={index}
                             className={`w-8 h-8 flex justify-center items-center`}
                             style={{ animationDelay: `${index * 200}ms` }}
-                          >
-                          </div>
+                          ></div>
                         ))}
                       </div>
                     </div>
@@ -138,21 +137,39 @@ const Projects = () => {
                     {item.iconLists.map((icon, index) => (
                       <div
                         key={index}
-                        className="border border-white/[.2] rounded-full bg-black lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center"
+                        className="border border-white/[.2] rounded-full bg-green/20 lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center"
                         style={{
                           transform: `translateX(-${5 * index + 2}px)`,
                         }}
                       >
-                        <Image src={icon} alt="icon" className="p-2" width={64} height={64} />
+                        <Image
+                          src={icon}
+                          alt="icon"
+                          className="p-2"
+                          width={32}
+                          height={32}
+                        />
                       </div>
                     ))}
                   </div>
 
-                  <div className="flex justify-center items-center group cursor-pointer">
-                    <p className="flex lg:text-lg md:text-sm text-xs text-emerald-300 group-hover:text-emerald-200 transition-colors">
-                      Check Live Site
-                    </p>
-                    <FaLocationArrow className="ms-3 text-emerald-400 group-hover:text-emerald-300 transition-colors group-hover:translate-x-1 duration-300" />
+                  <div className="flex flex-row justify-center items-center gap-4 group cursor-pointer">
+                    <a
+                      href={item.linkVideo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center text-emerald-300 group-hover:text-emerald-200 transition-colors"
+                    >
+                      Check Demo
+                    </a>
+                    <a
+                      href={item.linkgit}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center text-emerald-300 group-hover:text-emerald-200 transition-colors"
+                    >
+                      Github
+                    </a>
                   </div>
                 </div>
               </PinContainer>

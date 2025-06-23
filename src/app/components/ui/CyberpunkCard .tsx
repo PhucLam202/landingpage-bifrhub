@@ -8,21 +8,21 @@ interface CardProps {
 
 const CyberpunkCard = ({ card, index }: { card: CardProps; index: number }) => {
   return (
-    <div className="relative group">
+    <div className="relative group h-full">
       {/* Glowing background effect */}
       <div className="absolute -inset-0.5 bg-gradient-to-r from-emerald-500 to-green-400 rounded-3xl blur opacity-30 group-hover:opacity-50 transition duration-1000 group-hover:duration-200 animate-pulse"></div>
 
       <Button
         duration={Math.floor(Math.random() * 10000) + 8000}
         borderRadius="1.75rem"
-        className="relative bg-gray-900 rounded-3xl"
+        className="relative bg-gray-900 rounded-3xl h-full"
         style={{
           background:
             "linear-gradient(135deg, rgba(6,78,59,0.8) 0%, rgba(4,7,29,0.9) 50%, rgba(0,0,0,0.95) 100%)",
           borderRadius: "1.75rem",
         }}
       >
-        <div className="relative p-6 h-full">
+        <div className="relative p-6 h-full flex flex-col justify-between">
           {/* Cyberpunk grid overlay */}
           <div className="absolute inset-0 opacity-10">
             <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
