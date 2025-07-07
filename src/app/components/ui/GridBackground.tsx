@@ -104,7 +104,7 @@ export function GridBackground() {
           title="Start Earning Now"
           icon={<FaRocket />}
           position="right"
-          href="/dashboard"
+          href="https://bifrost-mint-lst-learning-ve-phuclpst09495-gmailcoms-projects.vercel.app/dashboard"
           aria-label="Start earning with Dotheon"
           otherClasses="px-6 py-3 text-lg font-semibold hover:scale-105 transition-transform"
         />

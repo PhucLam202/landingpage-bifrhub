@@ -5,9 +5,8 @@ import { FaGithub, FaTwitter, FaTelegramPlane, FaRocket, FaMoon } from "react-ic
 
 const navLinks = [
   { label: "About", href: "#about", external: true },
-  { icon: <FaGithub />, href: "https://github.com/", external: true },
-  { icon: <FaTwitter />, href: "https://x.com/", external: true },
-  { icon: <FaTelegramPlane />, href: "https://t.me/", external: true },
+  { icon: <FaGithub />, href: "https://github.com/PhucLam202/bifrost-mint-LST-learningVe", external: true },
+  { icon: <FaTwitter />, href: "https://x.com/PLtheCoder", external: true },
 ];
 
 const Header: React.FC = () => {
@@ -68,27 +67,21 @@ const Header: React.FC = () => {
           </li>
           {/* Social icons */}
           <li>
-            <a href="https://github.com/" target="_blank" rel="noopener noreferrer"
+            <a href="https://github.com/PhucLam202/bifrost-mint-LST-learningVe" target="_blank" rel="noopener noreferrer"
               className="p-2 rounded text-white text-lg transition">
               <FaGithub />
             </a>
           </li>
           <li>
-            <a href="https://x.com/" target="_blank" rel="noopener noreferrer"
+            <a href="https://x.com/PLtheCoder" target="_blank" rel="noopener noreferrer"
               className="p-2 rounded  text-white text-lg transition">
               <FaTwitter />
-            </a>
-          </li>
-          <li>
-            <a href="https://t.me/" target="_blank" rel="noopener noreferrer"
-              className="p-2 rounded  text-white text-lg transition">
-              <FaTelegramPlane />
             </a>
           </li>
           {/* Launch Dashboard */}
           <li>
             <a
-              href="#"
+              href="https://bifrost-mint-lst-learning-ve-phuclpst09495-gmailcoms-projects.vercel.app/dashboard"
               className="flex items-center gap-1 px-4 py-2 bg-violet-600 hover:bg-violet-700 text-white rounded transition font-semibold"
             >
               Launch Dashboard
