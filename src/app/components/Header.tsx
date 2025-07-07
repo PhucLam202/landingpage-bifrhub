@@ -67,7 +67,7 @@ const Header: React.FC = () => {
           </li>
           {/* Social icons */}
           <li>
-            <a href="https://github.com/PhucLam202/bifrost-mint-LST-learningVe" target="_blank" rel="noopener noreferrer"
+            <a href="https://bifrost-mint-lst-learning-a43m8szrh.vercel.app/" target="_blank" rel="noopener noreferrer"
               className="p-2 rounded text-white text-lg transition">
               <FaGithub />
             </a>

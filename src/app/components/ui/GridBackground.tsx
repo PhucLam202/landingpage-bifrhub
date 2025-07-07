@@ -104,21 +104,12 @@ export function GridBackground() {
           title="Start Earning Now"
           icon={<FaRocket />}
           position="right"
-          href="https://bifrost-mint-lst-learning-ve-phuclpst09495-gmailcoms-projects.vercel.app/dashboard"
+          href="https://bifrost-mint-lst-learning-a43m8szrh.vercel.app/"
           aria-label="Start earning with Dotheon"
           otherClasses="px-6 py-3 text-lg font-semibold hover:scale-105 transition-transform"
         />
 
-        {/* Trust Proof */}
-        <div className="flex items-center gap-6 text-white/60 text-sm">
-          <div className="flex items-center gap-2">
-            <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-            2,847 users earning now
-          </div>
-          <div>
-            Trusted by <span className="text-white font-semibold">10,000+</span> DeFi users
-          </div>
-        </div>
+          
       </div>
 
       {/* Animations */}
