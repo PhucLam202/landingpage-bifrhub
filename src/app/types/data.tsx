@@ -1,3 +1,5 @@
+import { FaChartLine, FaSearch, FaLink, FaCoins, FaRobot, FaFolderOpen } from "react-icons/fa";
+
 export const navItems = [
   { name: "About", link: "#bento" },
   { name: "Projects", link: "#project" },
@@ -8,43 +10,75 @@ export const navItems = [
 export const gridItems = [
   {
     id: 1,
-    title: "My tech stack",
-    description: "I constantly try to improve",
-    stack: [
-      "TypeScript",
-      "React",
-      "Next.js",
-      "Node.js",
-      "Rust",
-      "TailwindCSS",
-      "PostgreSQL",
-      "Docker",
-    ],
-    className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh]",
-    imgClassName: "",
-    titleClassName: "justify-center",
-    img: "",
-    spareImg: "",
+    icon: <FaChartLine />,
+    title: "Analytics",
+    description: (
+      <>
+        <div className="font-bold text-base mb-1">Protocol Analytics</div>
+        <div className="text-xs">Track TVL, APY, and performance metrics across all major liquid staking protocols.</div>
+      </>
+    ),
+    className: "",
   },
   {
     id: 2,
-    title: "I prioritize client collaboration, fostering open communication ",
-    description: "",
-    className: "lg:col-span-2 md:col-span-3 md:row-span-2",
-    imgClassName: "w-full h-full",
-    titleClassName: "justify-end",
-    img: "/b1.svg",
-    spareImg: "",
+    icon: <FaSearch />,
+    title: "Search",
+    description: (
+      <>
+        <div className="font-bold text-base mb-1">Smart Search</div>
+        <div className="text-xs">Find protocols instantly and get real-time updates on performance.</div>
+      </>
+    ),
+    className: "",
   },
   {
     id: 3,
-    title: "I'm very flexible with time zone communications",
-    description: "",
-    className: "lg:col-span-2 md:col-span-3 md:row-span-2",
-    imgClassName: "",
-    titleClassName: "justify-start",
-    img: "",
-    spareImg: "",
+    icon: <FaLink />,
+    title: "Integration",
+    description: (
+      <>
+        <div className="font-bold text-base mb-1">Bifrost Integration</div>
+        <div className="text-xs">Direct access to Bifrost's liquid staking pools with special benefits.</div>
+      </>
+    ),
+    className: "",
+  },
+  {
+    id: 4,
+    icon: <FaCoins />,
+    title: "Staking",
+    description: (
+      <>
+        <div className="font-bold text-base mb-1">LST Minting</div>
+        <div className="text-xs">Mint Liquid Staking Tokens with one click and track your yields.</div>
+      </>
+    ),
+    className: "",
+  },
+  {
+    id: 5,
+    icon: <FaRobot />,
+    title: "AI Assistant",
+    description: (
+      <>
+        <div className="font-bold text-base mb-1">AI Portfolio Assistant</div>
+        <div className="text-xs">Get personalized staking recommendations and automated optimization.</div>
+      </>
+    ),
+    className: "",
+  },
+  {
+    id: 6,
+    icon: <FaFolderOpen />,
+    title: "Portfolio",
+    description: (
+      <>
+        <div className="font-bold text-base mb-1">Portfolio Management</div>
+        <div className="text-xs">Track all your staking positions and monitor yields in one place.</div>
+      </>
+    ),
+    className: "",
   },
 ];
 
@@ -153,29 +187,3 @@ export const companies = [
   },
 ];
 
-export const workExperience = [
-  {
-    id: 1,
-    title: "High-Performance Backend & API Development",
-    desc: "Built and optimized RESTful and gRPC APIs using Rust and Node.js, ensuring scalability and security for web applications.",
-    thumbnail: "/exp1.svg",
-  },
-  {
-    id: 2,
-    title: "Frontend Development & User Experience",
-    desc: "Designed and implemented interactive, responsive user interfaces with React.js and Next.js, focusing on performance and seamless user experience.",
-    thumbnail: "/exp2.svg",
-  },
-  {
-    id: 3,
-    title: "LLM Integration & Optimization",
-    desc: "Researched and deployed LLM integration solutions into applications, including query optimization, data processing, and improving response accuracy.",
-    thumbnail: "/exp3.svg",
-  },
-  {
-    id: 4,
-    title: "DevOps Infrastructure Deployment & Management",
-    desc: "Set up and maintained CI/CD pipelines using Docker and Kubernetes. Managed databases (PostgreSQL, MongoDB) and deployed applications on cloud platforms.",
-    thumbnail: "/exp4.svg",
-  },
-];

@@ -1,11 +1,12 @@
 import Head from "next/head";
-import { navItems } from "@/app/types/data";
 import Hero from "./components/Hero";
-import Experience from "./components/Experience";
+import Feature from "./components/Feature";
 import { Bento } from "./components/Bento";
-import Projects from "./components/Projects";
+//import Projects from "./components/Projects";
+import { FAQSection } from  "./components/faq";
 import Footer from "./components/Footer";
-import { FloatingNav } from"./components/ui/floatingNav"
+import Header from "@/app/components/Header";
+
 export default function Home() {
   return (
     <>
@@ -13,7 +14,7 @@ export default function Home() {
         <title>Your Name | Portfolio</title>
       </Head>
 
-      {/* <Header /> */}
+      <Header />
 
       <main className="scroll-smooth relative bg-black-100 flex justify-center items-center flex-col overflow-hidden">
         {/* <FloatingNav navItems={navItems} /> */}
@@ -21,14 +22,11 @@ export default function Home() {
           <section id="hero">
             <Hero />
           </section>
-          <section id="bento">
+          <section id="hero">
             <Bento />
-          </section>
-          <section id="project">
-            <Projects />
-          </section>
-          <section id="experience">
-            <Experience />
+          </section>          
+          <section id="faqsection">
+            <FAQSection />
           </section>
           <section id="footer">
             <Footer />
